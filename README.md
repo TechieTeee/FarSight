@@ -1,4 +1,49 @@
-This repo is heavily inspired by and gives credit to [a-frame-in-100-lines by Zizzamia](https://github.com/Zizzamia/a-frame-in-100-lines)
+# FarSight
+FarSight is a revolutionary platform designed to empower influencers on FarCaster by providing comprehensive data analytics and powerful monetization tools. With FarSight, influencers can optimize their content strategy, enhance audience engagement, and maximize their revenue potential.
+
+## Background
+Influencers on FarCaster face challenges in understanding their audience, optimizing content, and monetizing their efforts effectively. FarSight addresses these challenges by offering advanced analytics, personalized recommendations, and integrated monetization features.
+
+## Problem Solved
+Lack of insights: FarSight provides detailed analytics on audience demographics, engagement metrics, and content performance.
+Limited monetization options: FarSight offers various monetization tools, including commerce integration, account abstraction, and frame analytics.
+Fragmented user experience: FarSight streamlines the user experience by integrating multiple tools and features into a single platform.
+Market
+The social media market is projected to reach $200 billion by 2025, with influencer marketing accounting for a significant portion of this revenue. FarSight taps into this lucrative market by providing value-added services to influencers, developers, and FarCaster users.
+
+## Key Features
+Advanced analytics: Gain insights into audience demographics, engagement metrics, and content performance.
+Monetization tools: Generate revenue through commerce integration, account abstraction, and frame analytics.
+Seamless integration: Integrate FarSight seamlessly with FarCaster and other platforms using open standards and APIs.
+Tech Stack
+FarSight is built using a modern tech stack, including:
+
+React.js
+Next.js
+Frames.js
+Tailwind CSS
+Node.js
+Base Protocol
+GraphQL
+Open Frame Standard
+XMTP
+Pinata
+
+
+## Installation
+To install FarSight locally, follow these steps:
+
+Clone the repository: git clone https://github.com/TechieTeee/farsight.git
+Install dependencies: npm install
+Start the development server: npm run dev
+Contributing
+Contributions to FarSight are welcome! To contribute, please follow these guidelines:
+
+Fork the repository
+Create a new branch: git checkout -b feature-name
+Make your changes and commit them: git commit -am 'Add new feature'
+Push to the branch: git push origin feature-name
+Submit a pull request
 
 ## Getting Started
 
