@@ -1,3 +1,5 @@
+![Farsight](https://github.com/TechieTeee/farsight/assets/100870737/8a7e96e6-d505-4a98-b797-c0d7de810dfa)
+
 # FarSight
 FarSight is a revolutionary platform designed to empower influencers on FarCaster by providing comprehensive data analytics and powerful monetization tools. With FarSight, influencers can optimize their content strategy, enhance audience engagement, and maximize their revenue potential.
 
