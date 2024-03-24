@@ -11,17 +11,48 @@ import Link from "next/link";
 import { useState } from "react";
 import { NextRequest, NextResponse } from "next/server";
 import { PinataFDK } from "pinata-fdk";
+import { gql, useQuery } from '@apollo/client';
+import '/styles/global.css';
 
-const fdk = new PinataFDK({
-  pinata_jwt: process.env.PINATA_JWT as string,
-  pinata_gateway: process.env.GATEWAY_URL as string,
-});
-
+// Define the reducer function
 const reducer = (state, action) => ({ count: state.count + 1 });
 
-export default async function FarSight(props) {
+// GraphQL query to fetch product trends data
+const GET_PRODUCT_TRENDS = gql`
+  query ProductTrends {
+    products {
+      id
+      name
+      sales
+      category
+    }
+  }
+`;
+
+// ProductTrends component to display product trends data
+const ProductTrends = () => {
+  const { loading, error, data } = useQuery(GET_PRODUCT_TRENDS);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <div>
+      <h2>Product Trends</h2>
+      <ul>
+        {data.products.map(product => (
+          <li key={product.id}>
+            {product.name} - Sales: {product.sales}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+// FarsightPage component
+const FarsightPage = (props) => {
   const previousFrame = getPreviousFrame(props.searchParams);
-  await validateActionSignature(previousFrame.postBody);
   const [state, dispatch] = useFramesReducer(
     reducer,
     { count: 0 },
@@ -102,9 +133,11 @@ export default async function FarSight(props) {
         </FrameButton>
       </div>
       <FrameButton onClick={dispatch}>{state.count}</FrameButton>
+      {/* Product trends */}
+      <ProductTrends />
     </FrameContainer>
   );
-}
+};
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const body = await req.json();
